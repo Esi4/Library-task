@@ -9,4 +9,6 @@ interface BookService {
     fun createBook(bookDTO: BookDTO): BookDTO
 
     fun getBookById(bookId: Int): BookDTO
+
+    fun updateBook(bookDTO: BookDTO): BookDTO
 }

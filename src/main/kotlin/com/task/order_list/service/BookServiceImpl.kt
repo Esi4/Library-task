@@ -37,4 +37,10 @@ class BookServiceImpl(
         return bookMapper.fromEntity(bookRepository.findById(bookId).get())
     }
 
+    override fun updateBook(bookDTO: BookDTO): BookDTO {
+        getBookById(bookDTO.id)
+        bookRepository.save(bookMapper.toEntity(bookDTO))
+        return bookDTO
+    }
+
 }
