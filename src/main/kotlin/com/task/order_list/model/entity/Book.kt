@@ -8,7 +8,11 @@ data class Book(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
 
-    val name: String,
+    val author: String,
+
+    val title: String,
+
+    val rating: Int,
 
     val description: String
 )

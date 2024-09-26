@@ -1,5 +1,10 @@
-INSERT INTO book (name, description) VALUES ('Booking 1', 'First booking description');
-INSERT INTO book (name, description) VALUES ('Booking 2', 'Second booking description');
-INSERT INTO book (name, description) VALUES ('Booking 3', 'Third booking description');
-INSERT INTO book (name, description) VALUES ('Booking 4', 'Fourth booking description');
-INSERT INTO book (name, description) VALUES ('Booking 5', 'Fifth booking description');
+INSERT INTO book (author, title, rating, description)
+VALUES ('Dostoevsky', 'Crime And Punishment', 10,  'An axe is the best remedy against a mortgage');
+INSERT INTO book (author, title, rating, description)
+VALUES ('Tolstoy', 'War And Piece', 7,  'Soooo bored');
+INSERT INTO book (author, title, rating, description)
+VALUES ('Hemingway', 'Old man and sea', 5,  'Fish-Fish-Fish');
+INSERT INTO book (author, title, rating, description)
+VALUES ('John Fowles', 'The Collector', 10,  'I feel very sorry for Miranda');
+INSERT INTO book (title, rating, description)
+VALUES ( 'Offer', 10,  'I hope');

@@ -9,13 +9,17 @@ import java.util.*
 class BookMapper: Mapper<BookDTO, Book> {
     override fun fromEntity(entity: Book): BookDTO = BookDTO(
         entity.id,
-        entity.name,
+        entity.author,
+        entity.title,
+        entity.rating,
         entity.description
     )
 
     override fun toEntity(domain: BookDTO): Book = Book(
         domain.id,
-        domain.name,
-        domain.description
+        domain.author ?: "Unknown Author",
+        domain.title ?: throw IllegalArgumentException("Book must have a title"),
+        domain.rating ?: 0,
+        domain.description?: ""
     )
 }
