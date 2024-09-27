@@ -1,19 +1,13 @@
 package com.task.order_list.controller
 
 import com.task.order_list.model.dto.BookDTO
-import com.task.order_list.model.entity.Book
 import com.task.order_list.service.BookService
-import com.task.order_list.service.BookServiceImpl
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.PutMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
+@RequestMapping("/books")
 class BookController(private val bookService: BookService
 ) {
     @GetMapping
@@ -32,5 +26,25 @@ class BookController(private val bookService: BookService
     @PutMapping
     fun updateBook(@RequestBody bookDTO: BookDTO): ResponseEntity<BookDTO> {
         return ResponseEntity.ok(bookService.updateBook(bookDTO))
+    }
+
+    @DeleteMapping("/{id}")
+    fun deleteBook(@PathVariable id: Int): ResponseEntity<Unit> {
+        return ResponseEntity(bookService.deleteBook(id), HttpStatus.NO_CONTENT)
+    }
+
+    @GetMapping("/author/{author}")
+    fun findAllBooksByAuthor(@PathVariable author: String): ResponseEntity<List<BookDTO>> {
+        return ResponseEntity.ok(bookService.findAllBooksByAuthor(author))
+    }
+
+    @GetMapping("/title/{title}")
+    fun findAllBooksByTitle(@PathVariable title: String): ResponseEntity<List<BookDTO>> {
+        return ResponseEntity.ok(bookService.findAllBooksByTitle(title))
+    }
+
+    @PatchMapping("/{id}/rating/{newRating}")
+    fun updateRatingBook(@PathVariable id: Int, @PathVariable newRating: Int): ResponseEntity<BookDTO> {
+        return ResponseEntity.ok(bookService.updateRatingBook(id, newRating))
     }
 }
