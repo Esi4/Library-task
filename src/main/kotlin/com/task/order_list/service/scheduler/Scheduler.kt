@@ -9,7 +9,7 @@ class Scheduler(val bookService : BookService) {
 
     @Scheduled(initialDelay = 3000L, fixedDelayString = "\${scheduler.intervalMs}")
     fun doWork() {
-        val booksList = bookService.getAllBooks().filter({it.rating == 0});
+        val booksList = bookService.getAllBooks().filter({it.rating == 0})
 
         for (book in booksList) {
             bookService.deleteBook(book.id)

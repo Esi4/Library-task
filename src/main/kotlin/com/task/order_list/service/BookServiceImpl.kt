@@ -4,7 +4,6 @@ import com.task.order_list.model.dto.BookDTO
 import com.task.order_list.model.exception.BookException
 import com.task.order_list.model.mapper.BookMapper
 import com.task.order_list.model.repository.BookRepository
-import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 
 @Service
@@ -30,7 +29,7 @@ class BookServiceImpl(
         }
 
         return bookRepository.getAllCellBooks().map{
-            bookMapper.fromEntity(it);
+            bookMapper.fromEntity(it)
         }
     }
 
@@ -63,7 +62,7 @@ class BookServiceImpl(
         }
 
         return booksByAuthor.map{
-            bookMapper.fromEntity(it);
+            bookMapper.fromEntity(it)
         }
     }
 
@@ -75,7 +74,7 @@ class BookServiceImpl(
         }
 
         return booksByAuthor.map{
-            bookMapper.fromEntity(it);
+            bookMapper.fromEntity(it)
         }
     }
 
