@@ -1,4 +1,4 @@
-package com.task.order_list.service.scheduler
+package com.task.library.service.scheduler
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.context.annotation.Configuration

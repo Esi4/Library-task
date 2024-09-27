@@ -1,4 +1,4 @@
-package com.task.order_list.model.dto
+package com.task.library.model.dto
 
 class BookDTO(
     val id: Int = -1,

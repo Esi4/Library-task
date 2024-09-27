@@ -1,6 +1,6 @@
-package com.task.order_list.service
+package com.task.library.service
 
-import com.task.order_list.model.dto.BookDTO
+import com.task.library.model.dto.BookDTO
 
 interface BookService {
 

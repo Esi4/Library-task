@@ -1,7 +1,7 @@
-package com.task.order_list.model.mapper
+package com.task.library.model.mapper
 
-import com.task.order_list.model.dto.BookDTO
-import com.task.order_list.model.entity.Book
+import com.task.library.model.dto.BookDTO
+import com.task.library.model.entity.Book
 import org.springframework.stereotype.Service
 
 @Service

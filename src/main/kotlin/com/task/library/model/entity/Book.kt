@@ -1,4 +1,4 @@
-package com.task.order_list.model.entity
+package com.task.library.model.entity
 
 import jakarta.persistence.*
 

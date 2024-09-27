@@ -1,9 +1,9 @@
-package com.task.order_list.service
+package com.task.library.service
 
-import com.task.order_list.model.dto.BookDTO
-import com.task.order_list.model.exception.BookException
-import com.task.order_list.model.mapper.BookMapper
-import com.task.order_list.model.repository.BookRepository
+import com.task.library.model.dto.BookDTO
+import com.task.library.model.exception.BookException
+import com.task.library.model.mapper.BookMapper
+import com.task.library.model.repository.BookRepository
 import org.springframework.stereotype.Service
 
 @Service

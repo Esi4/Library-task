@@ -1,7 +1,7 @@
-package com.task.order_list.controller
+package com.task.library.controller
 
-import com.task.order_list.model.dto.BookDTO
-import com.task.order_list.service.BookService
+import com.task.library.model.dto.BookDTO
+import com.task.library.service.BookService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

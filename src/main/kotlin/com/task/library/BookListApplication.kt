@@ -1,4 +1,4 @@
-package com.task.order_list
+package com.task.library
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

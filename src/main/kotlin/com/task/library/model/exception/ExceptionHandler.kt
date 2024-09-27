@@ -1,4 +1,4 @@
-package com.task.order_list.model.exception
+package com.task.library.model.exception
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ExceptionHandler
